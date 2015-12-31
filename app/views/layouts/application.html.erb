@@ -2,13 +2,36 @@
 <html>
 <head>
   <title><%= yield(:title) %> | Personal Website</title>
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header id="main_navigation" class="clearfix">
+		<%= link_to "Adnane Gasmi", root_path, class: "name" %>
+		<nav>
+			<%= link_to "Blog", "#" %>
+			<%= link_to "CV", "#" %>
+			<%= link_to "Contact", "#" %>
+		</nav>
+	</header>
+<body>
+<% if notice %>
+		<p class="notice"><%= notice %></p>
+	<% elsif alert %>
+		<p class="alert"><%= alert %></p>
+	<% end %>
 
 <%= yield %>
 
+<footer id="main_footer">
+		<p class="copyright">&copy;2015 Adnane Gasmi</p>
+		<nav>
+			<a href="http://github.com/gadnane" target="_blank"><i class="fa fa-github"></i></a>
+			<a href="#" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+		</nav>
+	</footer>
 </body>
 </html>
