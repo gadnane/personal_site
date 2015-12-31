@@ -18,7 +18,11 @@ gem 'pg', '0.17.1'
 
 gem 'sdoc', '0.4.0', 	group: :doc
 
-gem 'rails_12factor', '0.0.2', 	group: :production
+group :production do
+	gem 'rails_12factor', '0.0.2' 
+	gem 'puma',           '2.11.1'
+
+end
 
 group :development, :test do
   gem 'byebug', '3.4.0'
