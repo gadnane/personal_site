@@ -5,15 +5,15 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def edit
-	@post = Post.find(params[:id])
+	@post = Post.friendly.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post.update_attributes(post_params)
       flash[:success] = "Post updated"
       redirect_to @post
@@ -37,7 +37,7 @@ def create
   end
 
  def destroy
-    Post.find(params[:id]).destroy
+    Post.friendly.find(params[:id]).destroy
     flash[:success] = "Post deleted"
     redirect_to posts_path
   end
@@ -46,7 +46,7 @@ def create
   private
 
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :slug)
     end
 
 end
