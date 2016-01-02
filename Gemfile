@@ -14,7 +14,9 @@ gem 'turbolinks', '2.3.0'
 
 gem 'jbuilder', '2.2.3'
 
+gem 'pygments.rb', '0.6.0'
 
+gem 'redcarpet', '3.2.2'
 
 gem 'sdoc', '0.4.0', 	group: :doc
 

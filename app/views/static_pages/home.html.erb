@@ -1,4 +1,3 @@
-
 <div class="wrapper wrapper_padding clearfix">
 	<div class="col-1 about homepage_content">
 		<h2>About Me</h2>
@@ -10,8 +9,10 @@
 	<div class="col-2 homepage_content">
 		<h2>Recent Blog Posts</h2>
 		<hr>
-		<h3><%= link_to "Blog post 1", "#" %></h3>
-			<p class="date">Date</p>
+		<% @posts.each do |post| %>
+			<h3><a href="#"><%= link_to post.title, post %></a></h3>
+			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
 	</div>
 	<div class="col-3 homepage_content">
 		<h2>Some Projects</h2>
