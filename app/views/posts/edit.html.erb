@@ -1,5 +1,8 @@
 <% provide(:title, 'Create Post') %>
-<h1>Update Post</h1>
+
+
+<div class="skinny_wrapper wrapper_padding">
+<h1 id="page_title">Update Post</h1>
 
 <%= form_for @post do |f| %>
 	<% if @post.errors.any? %>
@@ -26,3 +29,4 @@
 	<%= f.submit %>
 
 <% end %>
+</div>
