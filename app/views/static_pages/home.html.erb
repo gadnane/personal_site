@@ -3,8 +3,9 @@
 		<h2>About Me</h2>
 		<hr>
 		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-		<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <a href="#" target="_blank">Github</a>.</p>
-		<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form. <a href="#" target="_blank">Linkedin</a>.</p>
+		<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <a href="https://github.com/gadnane" target="_blank">GitHub</a>.</p>
+		<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form. <a href="https://ca.linkedin.com/in/adnane-gasmi-231814111
+" target="_blank">Linkedin</a>.</p>
 	</div>
 	<div class="col-2 homepage_content">
 		<h2>Recent Blog Posts</h2>
@@ -17,7 +18,12 @@
 	<div class="col-3 homepage_content">
 		<h2>Some Projects</h2>
 		<hr>
-	<h3><%= link_to "Project 1", "#" %></h3>
-			<p class="date">Date</p>
+	<% @projects.each do |project| %>
+			<h3><a href="#"><%= link_to project.title, project %></a></h3>
+			<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
+		<div id="all_projects_link"><%= link_to "View all projects.", projects_path %>
+		</div>
 	</div>
+	
 </div>
