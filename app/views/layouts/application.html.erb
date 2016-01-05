@@ -13,7 +13,7 @@
 		<%= link_to "Adnane Gasmi", root_path, class: "name" %>
 		<nav>
 			<%= link_to "Blog", posts_path %>
-			<%= link_to "CV", cv_path %>
+			<%= link_to "CV", cv_path, :target => "_blank" %>
 			<%= link_to "Contact", new_contact_path %>
 			<% if user_signed_in? %>
 			<%= link_to "New post", new_post_path%>
