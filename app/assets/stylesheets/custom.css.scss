@@ -232,17 +232,6 @@ input[type="submit"], .button {
 	}
 }
 
-#all_projects_link {
-	a {
-		color: $dark;
-		font-weight: 900;
-		text-decoration: none;
-		&:hover {
-			color: $highlight;
-		}
-	}
-}
-
 .about {
 	padding: 0 7.5% 0 0;
 

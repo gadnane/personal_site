@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   root 'static_pages#home'
-  get 'static_pages/curricVitae'
+  get 'cv' => 'static_pages#curricVitae'
+
 
   resources :posts
 
@@ -10,6 +11,13 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:new, :create]
 
-  get '*path' => redirect('/')
+  # get '*path' => redirect('/')
+
+  
+
+  devise_scope :user do
+  	get 'login' => 'devise/sessions#new'
+  	post 'login' => 'devise/sessions#create'
+  end
 
 end

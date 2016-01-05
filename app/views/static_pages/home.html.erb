@@ -2,16 +2,17 @@
 	<div class="col-1 about homepage_content">
 		<h2>About Me</h2>
 		<hr>
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-		<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <a href="https://github.com/gadnane" target="_blank">GitHub</a>.</p>
-		<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form. <a href="https://ca.linkedin.com/in/adnane-gasmi-231814111
-" target="_blank">Linkedin</a>.</p>
+		<p>My name is Adnane Gasmi, and i'm a 4th year software engineering student at the Univeristy of Ottawa, expecting to graduate this April.</p>
+		<p>I am very passionate about software development, and I have a particular interest in web technologies. </p>
+		<p>I created this site to share a little bit of that passion with readers through some blog posts.</p>
+		<p>Most of my code is hosted on <a href="https://github.com/gadnane" target="_blank">GitHub</a>, and if you'd like to learn a bit more about me, you can visit my <a href="https://ca.linkedin.com/in/adnane-gasmi-231814111
+" target="_blank">Linkedin</a> page.</p>
 	</div>
 	<div class="col-2 homepage_content">
 		<h2>Recent Blog Posts</h2>
 		<hr>
 		<% @posts.each do |post| %>
-			<h3><a href="#"><%= link_to post.title, post %></a></h3>
+			<h3><%= link_to post.title, post %></h3>
 			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
 		<% end %>
 	</div>
@@ -19,11 +20,11 @@
 		<h2>Some Projects</h2>
 		<hr>
 	<% @projects.each do |project| %>
-			<h3><a href="#"><%= link_to project.title, project %></a></h3>
+			<h3><%= link_to project.title, project %></h3>
 			<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
 		<% end %>
-		<div id="all_projects_link"><%= link_to "View all projects.", projects_path %>
-		</div>
+		<strong><%= link_to "View all projects.", projects_path %>
+		</strong>
 	</div>
 	
 </div>
