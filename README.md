@@ -1,28 +1,8 @@
-== README
+Personal Website
+================ 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my personal website. I created this to share a little bit more about myself, as well as to write about things I find interesting in technology, and show case some projects.
+You can visit the website by following http://agasmi.me
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+I built the website using Ruby 2.1.1, and Rails 4.2.2.
+Feel free to look at the Gemfile if you'd like to see what other technologies were used.
