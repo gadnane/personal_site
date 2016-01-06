@@ -12,6 +12,7 @@
 		<h2>Recent Blog Posts</h2>
 		<hr>
 		<% @posts.each do |post| %>
+		Coming Soon!
 			<h3><%= link_to post.title, post %></h3>
 			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
 		<% end %>
