@@ -4,14 +4,13 @@
 		<hr>
 		<p>My name is Adnane Gasmi, and i'm a 4th year software engineering student at the Univeristy of Ottawa, expecting to graduate this April.</p>
 		<p>I am very passionate about software development, and I have a particular interest in web technologies. </p>
-		<p>I created this site to share a little bit of that passion with readers through some blog posts.</p>
+		<p>I created this site to share a little bit of that passion with readers through some blog posts. I mostly write about challenges that i've faced and how I solved them, or things that I find interesting.</p>
 		<p>Most of my code is hosted on <a href="https://github.com/gadnane" target="_blank">GitHub</a>, and if you'd like to learn a bit more about me, you can visit my <a href="https://ca.linkedin.com/in/adnane-gasmi-231814111
 " target="_blank">Linkedin</a> page.</p>
 	</div>
 	<div class="col-2 homepage_content">
 		<h2>Recent Blog Posts</h2>
 		<hr>
-		Coming Soon!
 		<% @posts.each do |post| %>
 			<h3><%= link_to post.title, post %></h3>
 			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>

@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-  	@posts = Post.all.order("created_at desc").last(3)
-  	@projects = Project.all.order("created_at desc").last(2)
+  	@posts = Post.all.order("created_at desc").first(3)
+  	@projects = Project.all.order("created_at desc").first(2)
   end
 
   def curricVitae
