@@ -1,10 +1,13 @@
-<h1 id="page_title">Blog posts</h1>
+<h1 id="page_title">Blog Page</h1>
 
 <div id="posts_wrapper" class="skinny_wrapper">
 	<% @posts.each do |post| %>
 		<div class="post">
 			<p class="date"><%= post.created_at.strftime('%A, %B %d') %></p>
 			<h2><%= link_to post.title, post %></h2>
+			<div id="posts_preview">
+			<p><%= markdown truncate(post.content[17..post.content.length],length: 317)%></p>
+			</div>
 			<hr>
 		</div>
 	<% end %>
